@@ -43,9 +43,9 @@ export default function BarcodeScanner() {
 
                     if(scanned)
                     {
-                        alert('Bar code with type '+type.type+' and data '+type.data+' has been scanned!');
+                        //alert('Bar code with type '+type.type+' and data '+type.data+' has been scanned!');
                         
-                        navigate('ProductViewer');    
+                        navigate('ProductViewer',{id:type.data});    
                     }
                     
                     

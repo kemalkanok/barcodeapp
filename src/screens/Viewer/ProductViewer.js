@@ -20,16 +20,18 @@ class ProductViewer extends React.Component {
 
   componentDidMount() {
 
-    console.log(this.props);
+    //console.log(this.props.navigation.state.params.id);
   }
 
   render() {
-    let itemData = this.props.data
-    let itemType = this.props.type
+
+    let itemData = this.props.navigation.state.params != undefined ? this.props.navigation.state.params.id : ''
+
+    
     return (
       <View>
         <Text>
-          
+          { itemData }
         </Text>
       </View>
     );
