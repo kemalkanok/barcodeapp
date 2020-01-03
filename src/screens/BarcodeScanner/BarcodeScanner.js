@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import Camera from 'react-native-camera';
 
-import { useNavigation } from 'react-navigation-hooks'
+import { useNavigation , useNavigationParam } from 'react-navigation-hooks'
 
 
 
@@ -19,6 +19,7 @@ export default function BarcodeScanner() {
     }, []);
 
     const { navigate } = useNavigation();
+
 
     if (hasPermission === null) {
         return <Text>Requesting for camera permission</Text>;
@@ -43,6 +44,7 @@ export default function BarcodeScanner() {
                     if(scanned)
                     {
                         alert('Bar code with type '+type.type+' and data '+type.data+' has been scanned!');
+                        
                         navigate('ProductViewer');    
                     }
                     

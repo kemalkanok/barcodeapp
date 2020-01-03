@@ -29,7 +29,7 @@ class ProductViewer extends React.Component {
     return (
       <View>
         <Text>
-          {{ itemData, itemType }}
+          
         </Text>
       </View>
     );
